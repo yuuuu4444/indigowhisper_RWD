@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/base/reset.css">
+    <link rel="stylesheet" href="css/base/variables.css">
+    <link rel="stylesheet" href="css/layout/gridsystem.css">
+    <link rel="stylesheet" href="css/component/header.css">
+    <link rel="stylesheet" href="css/component/footer.css">
+
+    
+    <link rel="stylesheet" href="css/component/component.css">
+    <link rel="stylesheet" href="css/component/button.css">
+    <link rel="stylesheet" href="css/component/form.css">
+    <link rel="stylesheet" href="css/component/title.css">
+    <link rel="stylesheet" href="css/page/sign.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+    <link rel="icon" href="img/favicon.ico">
+    <title>染木青-登入/註冊</title>
+</head>
+<body>
+    <!-- header -->
+    <header class="header" id="header">
+        <h1>
+            <a href="index.html">
+                <img src="img/logo_pc.svg" alt="染木青logo">
+            </a>
+        </h1>
+
+        <!-- 導覽列 -->
+        <nav class="nav" id="nav">
+            <ul class="menuList">
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="about.html">關於我們</a></li>
+                <li><a href="workshop.html">工作坊</a></li>
+                <li><a href="shop.html">精選染品</a></li>
+                
+            </ul>
+
+            <!-- 平板、pc在header，手機固定底部 -->
+            <ul class="iconList">
+                <li><a href="#" id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a href="sign.html"><i class="fa-solid fa-user"></i></a></li>
+                <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+            <!-- 搜尋彈窗 -->
+            <div id="searchModal" class="modal">
+                <div class="searchContent">
+                <span class="closeBtn">&times;</span>
+                <div class="inputRow">
+                    <input type="text" placeholder="輸入關鍵字搜尋..." class="searchInput" id="searchInput">
+                    <button class="searchSubmit" id="searchSubmit">搜尋</button>
+                </div>
+                </div>
+            </div>
+        </nav>
+        <!-- 漢堡選單 -->
+        <button class="hamburger">
+            <i class="fa-solid fa-bars iconBar"></i>
+            <i class="fa-solid fa-xmark  iconBar-close"></i>
+        </button>
+    </header>
+
+    <section class="categoryTitle">
+            <span>SIGN IN&nbsp;&nbsp;</span>
+            <h2>登入</h2>
+            <p>一筆登入，是與自然的重新相遇；記下你的名字，也悄悄記下每一抹色彩的緣分。</p>
+    </section>
+    <main class="container">
+        <div class="breadcrumb">
+            <ol>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="sign.html" aria-current="page">登入／註冊</a></li>
+            </ol>
+        </div>
+        <div class="row signSection">
+            <div class="col-12 col-md-8">
+
+
+
+                <div class="signCard">
+                    <div class="signLogo">
+                        <img src="img/logo_pc.svg" alt="logo">
+                    </div>
+                    <form class="signForm">
+                        <div class="signInput">
+                            <input type="email" id="email" name="email" placeholder="電子郵件" required>
+                        </div>
+                        <div class="signInput">
+                            <input type="password" id="password" name="password" placeholder="密碼" required>
+                        </div>
+                        <div class="forgotPassword">
+                            <a href="#">忘記密碼？</a>
+                        </div>
+                        <button class="signBtn" type="submit" >登入</button>
+                        <div class="signUpLink">
+                            還沒有帳號？請點此<a href="#">註冊</a>
+                        </div>
+                    </form>
+
+                    <div class="fastSign">
+                        <span>快速登入</span>
+                    </div>
+
+                    <div class="socialSign">
+                        <a href="#" class="socialIcon google" aria-label="使用Google登入">
+                            <img src="img/social/google.png" alt="Google">
+                        </a>
+                        <a href="#" class="socialIcon line" aria-label="使用LINE登入">
+                            <img src="img/social/line.png" alt="LINE">
+                        </a>
+                        <a href="#" class="socialIcon facebook" aria-label="使用Facebook登入">
+                            <img src="img/social/facebook.png" alt="Facebook">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container footContent">
+            <div class="row">
+                <div class="logoMenu col-12 col-md-12 col-lg-9">
+                    <a href="index.html">
+                        <img src="img/logo_pc.svg" alt="染木青logo">
+                    </a>
+                    <ul class="footMenu">
+                        <li class="footMenuItem"><a href="about.html">關於我們</a></li>
+                        <li class="footMenuItem"><a href="workshop.html">工作坊</a></li>
+                        <li class="footMenuItem"><a href="shop.html">商店</a></li>
+                        <li class="footMenuItem"><a href="#">聯絡我們</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-12 col-lg-3">
+                    <ul class="footIcon">
+                        <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-square-x-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p>Copyright  © Yuuuu All Rights Reserved 2025.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- <script src="js/cart.js"></script> -->
+    <script src="js/main.js"></script>
+</body>
+</html>

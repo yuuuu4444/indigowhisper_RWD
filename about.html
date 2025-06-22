@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/base/reset.css">
+    <link rel="stylesheet" href="css/base/variables.css">
+    <link rel="stylesheet" href="css/layout/gridsystem.css">
+    <link rel="stylesheet" href="css/component/header.css">
+    <link rel="stylesheet" href="css/component/footer.css">
+    
+    <link rel="stylesheet" href="css/component/component.css">
+    <link rel="stylesheet" href="css/component/button.css">
+    <link rel="stylesheet" href="css/component/form.css">
+    <link rel="stylesheet" href="css/component/title.css">
+    <link rel="stylesheet" href="css/page/about.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+    <link rel="icon" href="img/favicon.ico">
+    <title>染木青-關於我們</title>
+</head>
+<body>
+    <!-- header -->
+    <header class="header" id="header">
+        <h1>
+            <a href="index.html">
+                <img src="img/logo_pc.svg" alt="染木青logo">
+            </a>
+        </h1>
+
+        <!-- 導覽列 -->
+        <nav class="nav" id="nav">
+            <ul class="menuList">
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="about.html">關於我們</a></li>
+                <li><a href="workshop.html">工作坊</a></li>
+                <li><a href="shop.html">精選染品</a></li>
+                
+            </ul>
+
+            <!-- 平板、pc在header，手機固定底部 -->
+            <ul class="iconList">
+                <li><a href="#" id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a href="sign.html"><i class="fa-solid fa-user"></i></a></li>
+                <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+            <!-- 搜尋彈窗 -->
+            <div id="searchModal" class="modal">
+                <div class="searchContent">
+                <span class="closeBtn">&times;</span>
+                <div class="inputRow">
+                    <input type="text" placeholder="輸入關鍵字搜尋..." class="searchInput" id="searchInput">
+                    <button class="searchSubmit" id="searchSubmit">搜尋</button>
+                </div>
+                </div>
+            </div>
+        </nav>
+        <!-- 漢堡選單 -->
+        <button class="hamburger">
+            <i class="fa-solid fa-bars iconBar"></i>
+            <i class="fa-solid fa-xmark  iconBar-close"></i>
+        </button>
+    </header>
+
+    <section class="categoryTitle">
+            <span>BABOUT &nbsp Indigo whisper&nbsp;&nbsp;</span>
+            <h2>關於染木青</h2>
+            <p>拾一段時光，染一抹自然。染木青，以植物為筆，雙手為墨，緩緩描繪出每一件日常裡的溫柔。</p>
+    </section>
+
+    <main class="container">
+        <div class="breadcrumb">
+            <ol>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="about.html" aria-current="page">關於我們</a></li>
+            </ol>
+        </div>
+        <div class="row aboutTxt">
+            <div class="col-10 col-lg-6">
+                <div class="aboutImg">
+                    <img src="img/about/about_01.jpg">
+                </div>
+            </div>
+            <div class="col-10 col-lg-6">
+                <div class="aboutInfo">
+                    <div class="aboutTitle">
+                        <span class="aboutNum">01</span>
+                        <h2>品牌理念</h2>
+                        <h3>將時間染進生活</h3>
+                    </div>
+                    <div class="aboutContent">
+                        <p>染木青以草木為筆、布料為紙，記錄四季的色彩。</p>
+                        <p>每一次染布，都是與自然對話的過程，從採集植物、提煉染液、到雙手浸染，無一不是慢與真誠的累積。</p>
+                        <p>我們相信色彩不只是視覺，更是感受與記憶的沉澱。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row aboutTxt">
+            <div class="col-10 col-lg-6">
+                <div class="aboutImg">
+                    <img src="img/about/about_02.jpg">
+                </div>
+            </div>
+            <div class="col-10 col-lg-6">
+                <div class="aboutInfo">
+                    <div class="aboutTitle">
+                        <span class="aboutNum">02</span>
+                        <h2>工作坊</h2>
+                        <h3>用雙手記憶時序</h3>
+                    </div>
+                    <div class="aboutContent">
+                        <p>我們定期舉辦草木染工作坊，邀請你親手體驗植物染色的溫度與等待的美感。</p>
+                        <p>在山林邊、光影下，讓布料吸收自然的顏色，也讓自己在過程中沉澱與轉化。</p>
+                        <p>工作坊主題依時節變換，從藍染圍巾到植物拓印，與自然同步呼吸。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row aboutTxt">
+            <div class="col-10 col-lg-6">
+                <div class="aboutImg">
+                    <img src="img/about/about_03.jpg">
+                </div>
+            </div>
+            <div class="col-10 col-lg-6">
+                <div class="aboutInfo">
+                    <div class="aboutTitle">
+                        <span class="aboutNum">03</span>
+                        <h2>品牌願景</h2>
+                        <h3>留住山林的餘光</h3>
+                    </div>
+                    <div class="aboutContent">
+                        <p>染木青是一場與自然共生的實驗。</p>
+                        <p>我們期待將染色技藝從傳統延續至當代生活，讓更多人以一件手作，走進植物的溫度與土地的記憶。</p>
+                        <p>藉由每一次染色、每一場交流，讓自然與人彼此靠近，也讓慢下來的生活，有了新的可能。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- footer -->
+        <footer class="footer">
+            <div class="container footContent">
+                <div class="row">
+                    <div class="logoMenu col-12 col-md-12 col-lg-9">
+                        <a href="index.html">
+                            <img src="img/logo_pc.svg" alt="染木青logo">
+                        </a>
+                        <ul class="footMenu">
+                            <li class="footMenuItem"><a href="about.html">關於我們</a></li>
+                            <li class="footMenuItem"><a href="workshop.html">工作坊</a></li>
+                            <li class="footMenuItem"><a href="shop.html">商店</a></li>
+                            <li class="footMenuItem"><a href="#">聯絡我們</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-3">
+                        <ul class="footIcon">
+                            <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-square-x-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>Copyright  © Yuuuu All Rights Reserved 2025.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

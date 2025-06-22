@@ -1,0 +1,233 @@
+/* ----麵包屑區塊---- */
+.breadcrumb{
+    margin: 50px 0;
+    color: var(--primary);
+    font-size: var(--fz-1);
+    font-weight: 400;
+}
+
+.breadcrumb ol {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb li {
+    margin-right: 10px;
+}
+
+.breadcrumb li a {
+    text-decoration: none;
+    color: var(--darkgray);
+}
+
+.breadcrumb li a:hover {
+    color: var(--secondary);
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: '>'; 
+    margin: 0 8px; 
+    color: var(--darkgray); 
+}
+
+
+/* ----左側選單區塊---- */
+.sidebarFilters{
+    background-color: var(--white);
+    border: 1px solid var(--lightgray);
+    overflow: hidden; 
+}
+
+.sidebarFilters .filterCategoryList .filterCategoryItem{
+    border-bottom: 1px solid var(--lightgray);
+}
+
+.sidebarFilters .filterCategoryList .filterCategoryItem:last-child{
+    border-bottom: none;
+}
+
+/* 主選單按鈕 */
+.filterCategoryItem .categoryToggleBtn{
+    background-color: var(--white);
+    color: var(--primary);
+    font-size: var(--fz-2);
+    font-weight: var(--fw-4);
+
+    width: 100%;
+    padding: 15px 20px;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    transition: background-color 0.2s ease;
+
+    /* border: 1px solid #e0e0e0; */
+    border: none;
+    gap: 40px;
+}
+.filterCategoryItem .categoryToggleBtn:hover{
+    background-color: var(--brown); 
+}
+
+/* .filterCategoryItem .categoryToggleBtn:active{
+    background-color: #EFEFE2;
+} */
+
+/* 箭頭 */
+.arrowIcon {
+    font-size: var(--fz-0);
+    color: var(--primary);
+    transition: transform 0.3s ease;
+    /* 箭頭旋轉 */
+}
+
+.filterCategoryItem:active .arrowIcon {
+    transform: rotate(180deg);
+}
+
+/* 子選單 */
+.subMenu {
+    padding: 0;
+    margin: 0;
+    background-color: #fbfbfb; 
+
+    max-height: 0;
+    /* 預設隱藏，高度為0 */
+    
+    overflow: hidden; 
+    transition: max-height 0.3s ease-out; /* 高度變化 */
+}
+
+/* css暫時確認用，之後改JS控制 */
+.filterCategoryItem:active .subMenu{
+    background-color: #f9f9f9;
+    /* max-height: fit-content; */
+}
+
+/* 子選單項目 */
+.subMenuItem {
+    /* padding: 12px 20px 12px 30px; */
+    border-top: 1px solid var(--lightgray); /* 分割線 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .subMenuItem:first-child {
+    border-top: none; 
+} */
+
+.subMenuItem a {
+    /* outline: 2px solid red; */
+    width: 100%;
+    padding: 12px 0px 12px 25px;
+
+    text-decoration: none;
+    color: var(--primary);
+    font-size: var(--fz-1);
+    /* transition: color 0.2s ease; */
+}
+
+.subMenuItem a:hover {
+    color: var(--secondary); 
+}
+
+/* 顏色方塊 */
+.colorbox {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px; /* 輕微圓角 */
+    margin-right: 20px;
+    flex-shrink: 0; /* 防止方塊縮小 */
+}
+
+/* 各顏色方塊的背景色 */
+.colorBlue { background-color: #5A6AB6; }
+.colorYellow { background-color: #F8D98C; } 
+.colorRed { background-color: #E26E7E; }
+.colorBrown { background-color: #A06F6F; }
+
+/* ----右側商品區塊---- */
+.productCard{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    margin-bottom: 50px;
+}
+.productCard .productPic{
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+    aspect-ratio: 16/13;
+}
+
+.productCard .productPic img{
+    width: 100%;
+    vertical-align: middle;
+    object-fit: cover;
+    object-position: center center;
+    transition: transform 0.5s ease;
+}
+
+.productCard .productPic img:hover{
+    transform: scale(1.05);
+}
+
+.productCard .productInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 24px;
+}
+
+.productCard .productInfo .productTitleSeries{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    a{
+        text-decoration: none;
+        color: var(--primary);
+        
+    }
+    a:visited{
+        color: var(--primary);
+    }
+    a:hover{
+        color: var(--secondary);
+    }
+
+    .productTitle{
+        color: var(--primary);
+        font-size: 18px;
+        font-weight: 400;
+    }
+    
+    .productSeries{
+        color: var(--primary);
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+.productCard .productInfo .productPriceHeart{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    .productPrice{
+        color: var(--green, #6AC7CA);
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .heart{
+        font-size: 24px;
+        color: var(--primary);
+        cursor: pointer;
+        transition: color 0.2s ease-in-out;
+    }
+    .heart .fa-solid {
+    color: var(--primary)
+    }
+}

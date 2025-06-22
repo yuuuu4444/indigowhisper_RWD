@@ -1,0 +1,32 @@
+:root {
+/* color */
+--primary: #42577F;
+--secondary: #6AC7CA;
+--black: #1D1D1E;
+--white: #FFFFFF;
+--lightgray: #E0E0E0;
+--darkgray: #666666;
+--blue: #CADFE5;
+--brown: #f3efe2;
+
+
+
+/* font-size */
+--fz-0: 12px;
+--fz-1: 16px;
+--fz-2: 20px;
+--fz-3: 24px;
+--fz-4: 32px;
+--fz-5: 36px;
+--fz-6: 40px;
+--fz-7: 48px;
+--fz-8: 64px;
+
+/* font-weight */
+--fw-0: 350;
+--fw-1: 400;
+--fw-2: 500;
+--fw-3: 600;
+--fw-4: 700;
+--fw-5: 900;
+}

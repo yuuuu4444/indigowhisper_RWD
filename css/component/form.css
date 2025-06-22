@@ -1,0 +1,202 @@
+/* ----index:modal---- */
+.modal{
+display: none;
+position: fixed;
+z-index: 999;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal .searchContent{
+    background-color: #fff;
+    padding: 24px 20px;
+    border-radius: 4px;
+
+    width: 100%;
+    max-width: 500px;
+    margin: 10% auto;
+
+    position: relative;
+}
+
+
+.inputRow{
+    display: flex;
+    gap: 10px;
+}
+
+.inputRow .searchInput{
+    flex: 1;
+    padding: 10px 14px;
+    font-size: var(--fz-2);
+    border: 1px solid var(--lightgray);
+    box-sizing: border-box;
+}
+.inputRow .searchInput input::placeholder{
+    font-size: var(--fz-1);
+    color: var(--lightgray);
+}
+
+
+/* ----input數量加減框---- */
+.itemAmount{
+    display: flex;
+    align-items: center;
+}
+
+.itemAmount label{
+    color: var(--primary);
+    font-size: var(--fz-1);
+    letter-spacing: 2px;
+}
+
+.itemAmount .itemAmountInput{
+    display: flex;
+}
+
+.itemAmount .itemAmountInput  button{
+    color: var(--secondary);
+    background-color: var(--white);
+    border: 1px solid var(--lightgray);
+    
+    padding: 0 16px;
+    font-size: var(--fz-3);
+    /* font-size: 24px; */
+    transition: background-color 0.2s ease, color 0.2s ease; 
+}
+
+/* 減號btn */
+.itemAmount .itemAmountInput .minus{
+    text-align: center;
+    border-right: none;
+    /* border-radius: 12px 0 0 12px; */
+}
+
+/* 加號btn */
+.itemAmount .itemAmountInput .plus{
+    text-align: center;
+    border-left: none;
+    /* border-radius: 0 12px 12px 0; */
+}
+
+.itemAmount .itemAmountInput  button:hover{
+    color: var(--white);
+    background-color: var(--secondary);
+    cursor: pointer;
+}
+
+/* 數量框 */
+.itemAmountInput input{
+    width: 50px;
+    text-align: center;
+    border: 1px solid var(--lightgray);
+    font-size: var(--fz-2);
+    padding: 8px 0;
+    outline: none;
+    z-index: 1;
+}
+
+/* 移除數量框的上下符號-Chrome, Safari, Edge, Opera */
+.itemAmountInput input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* 移除數量框的上下符號-Firefox */
+.itemAmountInput input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* ----768input數量加減框---- */
+@media screen and (min-width: 768px){
+    .itemAmount label{
+        font-size: var(--fz-2);
+    }
+}
+
+
+
+
+/* ----form、input、lable、textarea通用樣式---- */
+form{
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin-bottom: 24px;  
+}
+
+/* input、textarea輸入框 */
+input{
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+    
+    font-size: var(--fz-1);
+    border: 1px solid var(--lightgray);
+    outline: none;
+    
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+textarea{
+    resize: vertical;
+    /* 允許垂直調整大小 */
+
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+    
+    font-size: var(--fz-1);
+    border: 1px solid var(--lightgray);
+    outline: none;
+    
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+/* 輸入框顯示文字 */
+input::placeholder{
+    font-size: var(--fz-1);
+    color: var(--lightgray);
+}
+
+/* 輸入框鎖定 */
+input:focus{
+    border-color: var(--secondary); 
+    box-shadow: 0 0 0 2px var(--secondary);
+}
+
+textarea:focus{
+    border-color: var(--secondary); 
+    box-shadow: 0 0 0 2px var(--secondary);
+}
+
+label{
+    display: block;
+    text-align: left;
+    color: var(--darkgray);
+    font-size: var(--fz-1);
+    font-weight: var(--fw-1);
+    letter-spacing: 3.36px;
+    margin-bottom: 8px;
+}
+
+/* ----768input通用樣式---- */
+@media screen and (min-width: 768px){
+    input{
+        font-size: var(--fz-2);
+    }
+    input::placeholder{
+        font-size: var(--fz-2);
+    }
+}
+
+

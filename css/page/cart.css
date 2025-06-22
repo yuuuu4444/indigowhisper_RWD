@@ -1,0 +1,361 @@
+/* ----進度條區塊---- */
+.checkoutSection{
+    justify-content: center;
+    margin: 40px 0 60px 0;
+}
+.checkoutSection .checkoutProgress{
+    display: flex;
+    justify-content: space-between;
+
+    position: relative;
+    padding: 0 20px;
+}
+.checkoutSection .checkoutProgress .step{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* flex-grow: 1;  */
+    /* 寬度均分 */
+}
+
+.checkoutSection .checkoutProgress .step .stepNumber{
+    color: var(--darkgray);
+    background: var(--white);
+    font-size: var(--fz-2);
+    font-weight: var(--fw-4);
+
+    padding: 10px 14px;
+    border: 1px solid var(--darkgray);
+    margin-bottom: 16px;
+
+    position: relative;
+    z-index: 1;
+    box-sizing: content-box
+}
+
+.checkoutSection .checkoutProgress .step .stepText{
+    color: var(--darkgray);
+    text-align: center;
+    font-size: var(--fz-1);
+    font-weight: var(--fw-1);
+}
+
+
+/* JS判斷階段用class */
+.checkoutSection .checkoutProgress .stepNow {
+    .stepNumber{
+        color: var(--white);
+        background:var(--primary);
+    }
+    .stepText{
+        color: var(--primary);
+        font-weight: var(--fw-2);
+    }
+}
+
+/* 連接線 */
+.checkoutProgress::before{
+    content: "";
+    position: absolute;
+    background: var(--darkgray);
+    
+    width: 70%;
+    height: 1px;
+    top: 25%;
+    right: 15%;
+    z-index: -1;
+}
+
+
+/* ----左側購物車項目區塊---- */
+.cartCard{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid var(--darkgray);
+    background: var(--white);
+
+    margin-bottom: 24px;
+}
+/* 單項商品圖 */
+.cartCard .cartItemImage{
+    /* max-width: 183px; */
+    /* max-height: 161px; */
+    min-width: 80px;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+}
+
+.cartCard .cartItemImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 單項內容(名稱、價格、小計)、刪除按鈕 */
+.cartCard .cardItemInfo{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+/* 單項內容(名稱、價格、小計) */
+.cartCard .cardItemInfo .cartItemContent{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 16px;
+}
+
+.cartCard .cardItemInfo .cartItemContent .cartItemTitle{
+    font-size: var(--fz-1);
+    font-weight: var(--fw-1);
+}
+.cartCard .cardItemInfo .cartItemContent .cartItemPrice{
+    font-size: var(--fz-1);
+}
+
+
+/* 單項金額小計 */
+.cartCard .cardItemInfo .cartItemContent .itemAmount{
+    flex-direction: column;
+    align-items: start;
+    .itemAmountlabelSpan{
+        color: var(--secondary);
+        font-size: var(--fz-1);
+        margin:  20px 0 5px 0;
+
+        label{
+            color: var(--black);
+        }
+    }
+
+    /* label{
+        color: var(--black);
+    }
+    span{
+        font-size: 18px;
+        font-weight: 400;
+    } */
+}
+
+/* 單項數量加減 */
+/* Btn細節見button.css */
+.cartCard .cardItemInfo .cartItemContent .itemAmountInput{
+        margin-right: 0px; 
+}
+
+/* 刪除按鈕 */
+.cartCard .cardItemInfo .trash{
+    font-size: var(--fz-2);
+    border: none;
+    background: none;
+    color: var(--lightgray);
+}
+
+.cartCard .cardItemInfo .trash:hover{
+    color: var(--darkgray);
+    cursor: pointer;
+}
+
+/* ----右側金額結算區塊---- */
+.cartSum{
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    box-sizing: border-box;
+    gap: 32px;
+
+    border: 1px solid var(--darkgray);
+    background: var(--white);
+    
+    margin-bottom: 24px;
+}
+
+.cartSum h3{
+    font-size: var(--fz-2);
+    font-weight: var(--fw-3);
+}
+
+.cartSum .cartSumList{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.cartSum .cartSumList li{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 20px;
+    font-weight: 400;
+
+    position: relative;
+}
+
+.cartSum .cartSumList li:first-child::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 180%;
+
+    background: #666;
+}
+
+.cartSum .cartSumList li.cartSumTotal{
+    margin-top: 16px;
+    font-size: 24px;
+    font-weight: 700;
+
+    position: relative;
+    span{
+        color: var(--secondary);
+    }
+}
+
+.cartSum .cartSumList li.cartSumTotal::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 150%;
+
+    background: #666;
+}
+
+
+@media screen and (min-width: 480px){
+/* ----進度條區塊---- */    
+/* 連接線 */
+    .checkoutProgress::before{
+        width: 85%;
+        right: 7.5%;
+    } 
+/* ----左側購物車項目區塊---- */
+/* 單項商品圖 */
+    .cartCard .cartItemImage{
+        max-width: 183px;
+        max-height: 161px;
+        aspect-ratio: 1/1;
+        aspect-ratio: unset;
+    }
+
+/* 單項內容(名稱、價格、小計) */
+    .cartCard .cardItemInfo .cartItemContent{
+        gap: 24px;
+    }
+    .cartCard .cardItemInfo .cartItemContent .cartItemTitle{
+        font-size: var(--fz-2);
+    }
+    .cartCard .cardItemInfo .cartItemContent .cartItemPrice{
+        font-size: var(--fz-2);
+    }  
+}
+
+@media screen and (min-width: 576px){
+/* ----左側購物車項目區塊---- */
+/* 單項金額小計 */
+    .cartCard .cardItemInfo .cartItemContent .itemAmount{
+        flex-direction: row;
+        
+        .itemAmountlabelSpan{
+            font-size: var(--fz-2);
+            margin:  20px 0 5px 0;
+        }
+    }
+/* 單項數量加減 */
+/* Btn細節見button.css */
+    .cartCard .cardItemInfo .cartItemContent .itemAmountInput{
+                margin-right: 20px;    
+        }
+
+}
+
+
+@media screen and (min-width: 768px){
+/* ----進度條區塊---- */
+    .checkoutSection .checkoutProgress .step .stepText{
+        font-size: var(--fz-2);
+    }
+/* 連接線 */
+    .checkoutProgress::before{
+        width: 80%;
+        right: 10%;
+    }
+    
+/* ----左側購物車項目區塊---- */
+    .cartCard{
+        padding: 16px;
+        gap: 40px;
+        margin-bottom: 24px;
+    }
+/* 單項商品圖 */
+    .cartCard .cartItemImage{
+        max-width: 183px;
+        /* max-height: 161px; */
+        /* aspect-ratio: 1/1; */
+        aspect-ratio: unset;
+    }
+
+/* 單項內容(名稱、價格、小計) */
+    .cartCard .cardItemInfo .cartItemContent{
+        gap: 24px;
+    }
+
+    .cartCard .cardItemInfo .cartItemContent .cartItemTitle{
+        font-size: var(--fz-2);
+    }
+    .cartCard .cardItemInfo .cartItemContent .cartItemPrice{
+        font-size: var(--fz-2);
+    }
+
+/* 單項金額小計 */
+    .cartCard .cardItemInfo .cartItemContent .itemAmount{
+        flex-direction: row;
+        
+        .itemAmountlabelSpan{
+            font-size: var(--fz-2);
+            margin:  20px 0 5px 0;
+        }
+    }
+
+/* 單項數量加減 */
+/* Btn細節見button.css */
+    .cartCard .cardItemInfo .cartItemContent .itemAmountInput{
+                margin-right: 48px;    
+        }
+
+/* 刪除按鈕 */
+    .cartCard .cardItemInfo .trash{
+        font-size: var(--fz-3);
+    }
+
+
+    .cartCard .cardItemInfo .cartItemContent{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 24px;
+
+        h4{
+            /* color: var(--primary); */
+            font-size: 20px;
+            font-weight: 400;
+        }
+    }
+    
+}
+
+@media screen and (min-width: 1024px){
+/* 連接線 */
+    .checkoutProgress::before{
+        width: 90%;
+        right: 5%;
+    }
+}

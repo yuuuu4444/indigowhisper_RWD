@@ -1,0 +1,238 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/base/reset.css">
+    <link rel="stylesheet" href="css/base/variables.css">
+    <link rel="stylesheet" href="css/layout/gridsystem.css">
+    <link rel="stylesheet" href="css/component/header.css">
+    <link rel="stylesheet" href="css/component/footer.css">
+
+    
+    <link rel="stylesheet" href="css/component/component.css">
+    <link rel="stylesheet" href="css/component/button.css">
+    <link rel="stylesheet" href="css/component/form.css">
+    <link rel="stylesheet" href="css/component/title.css">
+    <link rel="stylesheet" href="css/page/product.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+    <link rel="icon" href="img/favicon.ico">
+    <title>染木青商行-草木染圍巾–山霧粉</title>
+</head>
+<body>
+    <!-- header -->
+    <header class="header" id="header">
+        <h1>
+            <a href="index.html">
+                <img src="img/logo_pc.svg" alt="染木青logo">
+            </a>
+        </h1>
+
+        <!-- 導覽列 -->
+        <nav class="nav" id="nav">
+            <ul class="menuList">
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="about.html">關於我們</a></li>
+                <li><a href="workshop.html">工作坊</a></li>
+                <li><a href="shop.html">精選染品</a></li>
+                
+            </ul>
+
+            <!-- 平板、pc在header，手機固定底部 -->
+            <ul class="iconList">
+                <li><a href="#" id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a href="sign.html"><i class="fa-solid fa-user"></i></a></li>
+                <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+            <!-- 搜尋彈窗 -->
+            <div id="searchModal" class="modal">
+                <div class="searchContent">
+                <span class="closeBtn">&times;</span>
+                <div class="inputRow">
+                    <input type="text" placeholder="輸入關鍵字搜尋..." class="searchInput" id="searchInput">
+                    <button class="searchSubmit" id="searchSubmit">搜尋</button>
+                </div>
+                </div>
+            </div>
+        </nav>
+        <!-- 漢堡選單 -->
+        <button class="hamburger">
+            <i class="fa-solid fa-bars iconBar"></i>
+            <i class="fa-solid fa-xmark  iconBar-close"></i>
+        </button>
+    </header>
+
+    <section class="categoryTitle">
+            <!-- <span></span>
+            <h2></h2> -->
+    </section>
+
+    <main class="container">
+        <div class="breadcrumb">
+            <ol>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="shop.html">商店</a></li>
+                <li><a href="#">山色系列</a></li>
+                <li><a href="#">圍巾</a></li>
+                <li><a href="product.html" aria-current="page">草木染圍巾 - 山霧粉</a></li>
+            </ol>
+        </div>
+
+        <div class="row productSection">
+            <div class="col-10 col-lg-5">
+                <div class="productImages">
+                    <div class="mainImage" id="mainImageContainer">
+                        <img src="img/product/mainImage.png">
+                        <!-- <span class="heart" id="heart"><i class="fa-regular fa-heart"></i></span>  -->
+                    </div>
+                    <div class="imageShrinkList">
+                        <div class="imageShrink">
+                            <img src="img/product/product_imageShrink_01.png">
+                        </div>
+                        <div class="imageShrink">
+                            <img src="img/product/product_imageShrink_02.png">
+                        </div>
+                        <div class="imageShrink">
+                            <img src="img/product/product_imageShrink_03.png">
+                        </div>
+                        <div class="imageShrink">
+                            <img src="img/product/product_imageShrink_04.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-10  col-lg-5">
+                <div class="productRightSection">
+                    <div class="itemInfo">
+                        <h2 class="itemTitle">草木染圍巾─山霧粉</h2>
+                        <h3 class="itemSeries">山色系列</h3>
+                        <p class="itemPrice">NT$ 2,000</p>
+                        <div class="itemAttr">
+                            <p><span>尺寸：</span>約 55 x 180 cm</p>
+                            <p><span>成分：</span>100% 純棉</p>
+                            <p><span>顏色：</span>山霧粉（桃花心木染製）</p>
+                        </div>
+                    </div>
+    
+    
+                    <div class="itemAmount">
+                        <label for="amount">數量：</label>
+                        <div class="itemAmountInput">
+                            <button class="minus">−</button>
+                            <input type="number" id="amount" value="1" min="1" max="5" aria-label="商品數量">
+                            <button class="plus">+</button>
+                        </div>
+                    </div>
+    
+                    <div class="btnSection">
+                        <div class="buyNowBtn">
+                            <a  href="cart.html">立即購買</a >
+                        </div>
+                        <div class="addCartBtn">
+                            <a href="#">加入購物車</a >
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="col-md-10 col-lg-5">
+                <div class="btnSection">
+                        <div class="buyNowBtn">
+                            <a  href="cart.html">立即購買</a >
+                        </div>
+                        <div class="addCartBtn">
+                            <a href="#">加入購物車</a >
+                        </div>
+                </div>
+            </div> -->
+
+            <div class="col-10 col-lg-10">
+                <div class="itemContent">
+                    <h3>產品說明</h3>
+                    <p>以自然植物「桃花心木」反覆浸染，呈現如山中霧靄般的層次。圍巾邊緣為手工抽縫收尾，質地輕柔，適合四季搭配。每件皆為手作染布，色澤與紋理皆略有不同，是自然與時間交織的痕跡。</p>
+                </div>
+                <div class="itemContent">
+                    <h3>注意事項</h3>
+                    <ul class="itemNote">
+                        <li>建議手洗，使用中性洗劑，水溫不超過 30°C。</li>
+                        <li>避免陽光直曬，請置陰涼處自然晾乾。</li>
+                        <li>不可使用漂白劑與烘乾機。</li>
+                        <li>第一次清洗可能略有退色，為自然現象。</li>
+                        <li>長時間不使用時，建議收納於乾燥通風處，避免潮濕發霉。</li>
+                    </ul>
+                </div>
+                <div class="itemContent">
+                    <h3>相關產品</h3>
+                    <ul class="itemRelatived"> 
+                        <li>
+                            <a href="#">
+                                <img src="img/product/product_04.png" alt="草木染圍巾-青靛">
+                            </a>
+                            <div class="relatedProductTitle"> 
+                                <a href="#">圍巾-青靛</a> 
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <a href="#">
+                                <img src="img/product/product_03.png" alt="草木染圍巾-蘇木灰">
+                            </a>
+                            <div class="relatedProductTitle">
+                                <a href="#">圍巾-蘇木灰</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/product/product_02.png" alt="染布日用-青花">
+                            </a>
+                            <div class="relatedProductTitle">
+                                <a href="#">染布日用-青花</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container footContent">
+            <div class="row">
+                <div class="logoMenu col-12 col-md-12 col-lg-9">
+                    <a href="index.html">
+                        <img src="img/logo_pc.svg" alt="染木青logo">
+                    </a>
+                    <ul class="footMenu">
+                        <li class="footMenuItem"><a href="about.html">關於我們</a></li>
+                        <li class="footMenuItem"><a href="workshop.html">工作坊</a></li>
+                        <li class="footMenuItem"><a href="shop.html">商店</a></li>
+                        <li class="footMenuItem"><a href="#">聯絡我們</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-12 col-lg-3">
+                    <ul class="footIcon">
+                        <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-square-x-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p>Copyright  © Yuuuu All Rights Reserved 2025.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- <script src="/js/test.js"></script> -->
+    <script src="js/main.js"></script>
+</body>
+</html>

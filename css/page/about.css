@@ -1,0 +1,128 @@
+.aboutTxt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 72px;
+}
+
+/* 交換排序 */
+.container > .aboutSection >.row.aboutTxt:nth-of-type(3) > .col-lg-6:first-child {
+    /* 這邊用:nth-of-type(3)或nth-child(3)都一樣，因為前面有其他div標籤(麵包屑) */
+    order: 1;
+}
+
+.aboutImg{
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+}
+.aboutImg img{
+    width: 100%;
+}
+
+.aboutInfo{
+    display: flex;
+    flex-direction: column;
+}
+.aboutInfo .aboutTitle{
+    display: flex;
+    align-items: center;
+    padding: 32px 0;
+}
+
+.aboutInfo .aboutTitle .aboutNum{
+    color: var(--secondary);
+    font-size: var(--fz-2);
+    font-weight: var(--fw-1);
+
+    position: relative;
+}
+
+/* 斜線 */
+.aboutInfo .aboutTitle .aboutNum::after{
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: calc(100% + 25px);
+    width: 2px;
+    height: 40px;
+    background-color:var(--secondary);
+    transform: translateY(-50%) rotate(45deg);
+    transform-origin: top left;
+}
+
+.aboutInfo .aboutTitle h2{
+    color: var(--primary);
+    font-size: var(--fz-3);
+    font-weight: var(--fw-4);
+    letter-spacing: 3px;
+
+    margin-top: 10px; 
+    margin-left: 25px; 
+}
+
+.aboutInfo .aboutTitle h3{
+    color: var(--secondary);
+    font-size: var(--fz-1);
+    font-weight: var(--fw-2);
+    letter-spacing: 1px;
+
+    margin-top: 15px; 
+    margin-left: 5px; 
+}
+
+.aboutInfo .aboutContent p{
+    color: var(--primary);
+    font-size: var(--fz-1);
+    font-weight: var(--fw-1);
+    line-height: 24px;
+    letter-spacing: 2px;
+
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+
+@media screen and (min-width: 1024px){
+    .aboutTxt{
+        margin-bottom: 72px;
+    }
+    /* 交換排序 */
+    .container > .row.aboutTxt:nth-of-type(3) > .col-lg-6:first-child {
+        order: 2;
+    }
+
+    /* 斜線 */
+    .aboutInfo .aboutTitle .aboutNum::after{
+        left: calc(100% + 35px);
+        height: 50px;
+    }
+
+    .aboutInfo .aboutTitle h2{
+        font-size: var(--fz-4);
+        font-weight: var(--fw-4);
+        letter-spacing: 4.8px;
+
+        margin-left: 35px; 
+    }
+
+    .aboutInfo .aboutTitle h3{
+        font-size: var(--fz-3);
+        font-weight: var(--fw-2);
+        margin-left: 5px; 
+    }
+
+    .aboutInfo .aboutContent p{
+        color: var(--primary);
+        font-size: var(--fz-2);
+        line-height: 30px;
+        letter-spacing: 2.6px;
+
+        margin:0 25px;
+        margin-bottom: 24px;
+    }
+    
+}

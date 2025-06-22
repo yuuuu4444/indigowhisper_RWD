@@ -1,0 +1,215 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/base/reset.css">
+    <link rel="stylesheet" href="css/base/variables.css">
+    <link rel="stylesheet" href="css/layout/gridsystem.css">
+    <link rel="stylesheet" href="css/component/header.css">
+    <link rel="stylesheet" href="css/component/footer.css">
+
+    
+    <link rel="stylesheet" href="css/component/component.css">
+    <link rel="stylesheet" href="css/component/button.css">
+    <link rel="stylesheet" href="css/component/form.css">
+    <link rel="stylesheet" href="css/component/title.css">
+    <link rel="stylesheet" href="css/page/workshop.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+    <link rel="icon" href="img/favicon.ico">
+    <title>染木青商行-草木染圍巾–山霧粉</title>
+</head>
+<body>
+    <!-- header -->
+    <header class="header" id="header">
+        <h1>
+            <a href="index.html">
+                <img src="img/logo_pc.svg" alt="染木青logo">
+            </a>
+        </h1>
+
+        <!-- 導覽列 -->
+        <nav class="nav" id="nav">
+            <ul class="menuList">
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="about.html">關於我們</a></li>
+                <li><a href="workshop.html">工作坊</a></li>
+                <li><a href="shop.html">精選染品</a></li>
+                
+            </ul>
+
+            <!-- 平板、pc在header，手機固定底部 -->
+            <ul class="iconList">
+                <li><a href="#" id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a href="sign.html"><i class="fa-solid fa-user"></i></a></li>
+                <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+            <!-- 搜尋彈窗 -->
+            <div id="searchModal" class="modal">
+                <div class="searchContent">
+                <span class="closeBtn">&times;</span>
+                <div class="inputRow">
+                    <input type="text" placeholder="輸入關鍵字搜尋..." class="searchInput" id="searchInput">
+                    <button class="searchSubmit" id="searchSubmit">搜尋</button>
+                </div>
+                </div>
+            </div>
+        </nav>
+        <!-- 漢堡選單 -->
+        <button class="hamburger">
+            <i class="fa-solid fa-bars iconBar"></i>
+            <i class="fa-solid fa-xmark  iconBar-close"></i>
+        </button>
+    </header>
+
+    <section class="categoryTitle">
+            <!-- <span></span>
+            <h2></h2> -->
+    </section>
+
+    <main class="container">
+        <div class="breadcrumb">
+            <ol>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="index.html">工作坊</a></li>
+                <li><a href="workshop.html" aria-current="page">藍染圍巾工作坊</a></li>
+            </ol>
+        </div>
+        <div class="row workshopSection">
+            <div class="col-10 col-lg-6">
+                <div class="workshopImage">
+                    <div class="mainImage">
+                        <img src="img/workshop_07.jpg">
+                        <!-- <span class="heart" id="heart"><i class="fa-regular fa-heart"></i></span>  -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-10 col-lg-4">
+                <div class="workshopRightSection">
+                    <div class="itemInfo">
+                        <h2 class="itemTitle">藍染圍巾工作坊</h2>
+                        <div class="workshopAttr">
+                            <p><span>日期：</span>2025/07/15 (二)</p>
+                            <p><span>時間：</span>14:00 ~ 17:00</p>
+                            <p><span>地點：</span>染木青工作室(中壢區復興路46號)</p>
+                            <p><span>費用：</span>NT$ 1,200/人(含材料、工具、指導)</p>
+                            <p><span>對象：</span>對草木染有興趣者皆可參加</p>
+                        </div>
+                    </div>
+    
+                    <div class="btnSection">
+                        <div class="buyNowBtn">
+                            <a  href="#">立即報名</a >
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-10 col-lg-10">
+                <div class="itemContent">
+                    <h3>關於工作坊</h3>
+                    <p>在這場藍染圍巾工作坊中，您將親手體驗從媒染到浸染的完整過程。我們將使用天然藍靛染料，透過專業講師的指導，學習不同的綁紮技巧，創造出獨具個人風格的藍染圖案。</p>
+                        
+                    <p>藍染不僅是一項技藝，更是一場與自然對話的沉浸式體驗。您將在輕鬆愉快的氛圍中，感受植物的生命力，並將時間的印記染入布料，帶回一條充滿故事的圍巾。</p>
+                </div>
+                <div class="itemContent">
+                    <h3>工作坊流程</h3>
+                    <ol class="itemNote">
+                        <li>簡介與導覽：認識藍染歷史與天然染料。</li>
+                        <li>設計與綁紮：學習基礎綁紮技法，設計專屬圖案。</li>
+                        <li>浸染體驗：親手浸染圍巾，感受染液的變化。</li>
+                        <li>展開與清洗：揭開成果，清洗並晾曬。</li>
+                        <li>作品分享與交流：欣賞彼此作品，分享心得。</li>
+                    </ol>
+                </div>
+                <div class="itemContent">
+                    <h3>您將收穫</h3>
+                    <ul class="itemNote">
+                        <li>認識天然藍染植物與染料特性。</li>
+                        <li>設學習至少 3 種基礎藍染綁紮技巧。</li>
+                        <li>親手完成一條獨一無二的藍染純棉圍巾 (尺寸約 50x180 cm)。</li>
+                        <li>一份關於植物染的美好記憶與成就感。</li>
+                    </ul>
+                </div>
+                <div class="itemContent">
+                    <h3>報名須知</h3>
+                    <ul class="itemNote">
+                        <li>本工作坊採預約制，請務必提前報名。</li>
+                        <li>名額有限，額滿為止。</li>
+                        <li>報名成功後將收到確認信，內含付款資訊。</li>
+                        <li>如需取消或改期，請於活動前 7 天聯繫，逾期恕不受理退費。</li>
+                        <li>建議穿著不怕髒的衣物，或攜帶圍裙。</li>
+                    </ul>
+                </div>
+                <section  class="registerSection">
+                    <h2>我要報名</h2>
+                    <p class="registerIntro">請填寫以下表單，我們將會盡快與您聯繫。</p>
+                    <form class="workshopForm">
+                        <div class="workshopFormInput">
+                            <label for="name">姓名:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="workshopFormInput">
+                            <label for="email">電子郵件:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="workshopFormInput">
+                            <label for="phone">聯絡電話:</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="workshopFormInput">
+                            <label for="participants">報名人數:</label>
+                            <input type="number" id="participants" name="participants" min="1" value="1" required>
+                        </div>
+                        <div class="workshopFormInput">
+                            <label for="message">備註 (選填):</label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="registerBtn">確認報名</button>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </main>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container footContent">
+            <div class="row">
+                <div class="logoMenu col-12 col-md-12 col-lg-9">
+                    <a href="index.html">
+                        <img src="img/logo_pc.svg" alt="染木青logo">
+                    </a>
+                    <ul class="footMenu">
+                        <li class="footMenuItem"><a href="about.html">關於我們</a></li>
+                        <li class="footMenuItem"><a href="workshop.html">工作坊</a></li>
+                        <li class="footMenuItem"><a href="shop.html">商店</a></li>
+                        <li class="footMenuItem"><a href="#">聯絡我們</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-12 col-lg-3">
+                    <ul class="footIcon">
+                        <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-square-x-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p>Copyright  © Yuuuu All Rights Reserved 2025.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- <script src="/js/test.js"></script> -->
+    <script src="js/main.js"></script>
+</body>
+</html>

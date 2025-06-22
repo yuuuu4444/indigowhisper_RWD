@@ -1,0 +1,223 @@
+.productSection{
+    justify-content: center;
+}
+
+.col-10{
+    /* padding-bottom: 20px; */
+}
+
+/* ----左側商品圖區塊---- */
+.productImages{
+    display: flex;
+    flex-direction: column;
+}
+/* 左側主圖 */
+.productImages .mainImage{
+    aspect-ratio: 1/1;
+    overflow: hidden;
+}
+.productImages .mainImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 左側小縮圖 */
+.productImages .imageShrinkList{
+    display: flex;
+    justify-content: space-between;
+    margin: 32px 0;
+    gap: 4%;
+    /* gap: 24px; */
+}
+.productImages .imageShrinkList .imageShrink{
+    flex: 1;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    cursor: pointer;
+    border: 3px solid transparent;
+}
+
+.productImages .imageShrinkList .imageShrink img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    
+}
+.productImages .imageShrinkList .imageShrink img:hover{
+    cursor: pointer;
+    transform: scale(1.2,1.2);
+}
+
+/* 當前縮圖提示 */
+.productImages .imageShrinkList .imageShrink.active-thumbnail{
+    border: 3px solid var(--secondary);
+}
+
+
+/* ----右側商品資訊區塊---- */
+.productRightSection{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.itemInfo{
+    display: flex;
+    flex-direction: column;
+    color: var(--primary);
+
+    .itemTitle{
+        font-size: var(--fz-3);
+        font-weight: var(--fw-2);
+        letter-spacing: 4px;
+        margin-bottom: 10px;
+    }
+    .itemSeries{
+        font-size: var(--fz-2);
+        font-weight: var(--fw-1);
+        letter-spacing: 3px;
+    }
+    .itemPrice{
+        font-size: var(--fz-3);
+        font-weight: var(--fw-4);
+        color: var(--secondary);
+        letter-spacing: 2px;
+        margin: 35px 0;
+    }
+}
+
+.itemInfo .itemAttr{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+
+    font-size: var(--fz-1);
+    /* font-size: 20px; */
+    font-weight: var(--fw-0);
+    letter-spacing: 2px;
+}
+
+/* Btn細節見button.css */
+.btnSection{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+
+/* ----下方區塊---- */
+/* 說明區塊見component.css */
+
+/* 相關商品 */
+.itemContent .itemRelatived{
+    display: flex;
+    justify-content: space-around;
+    gap: 5%;
+
+    flex-wrap: wrap;
+}
+.itemContent .itemRelatived li{
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+    
+    text-align: center;
+}
+
+.itemContent .itemRelatived li>a{
+    display: block;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+}
+
+.itemContent .itemRelatived img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+    transition: 0.5s ease-out;
+}
+
+
+.itemContent .itemRelatived img:hover{
+    transform: scale(1.2,1.2);
+}
+
+/* 相關商品標題 */
+.itemContent .itemRelatived li .relatedProductTitle {
+    margin: 5px;
+    padding: 0 10px;
+}
+
+.itemContent .itemRelatived li .relatedProductTitle a {
+    display: block;
+    text-decoration: none; 
+    color: var(--primary);
+    font-size: var(--fz-1); 
+    font-weight: var(--fw-1);
+    transition: color 0.3s ease;
+}
+
+.itemContent .itemRelatived li .relatedProductTitle a:hover {
+    color: var(--secondary);
+}
+
+@media screen and (min-width: 768px){
+/* ----右側商品資訊區塊---- */
+    .productRightSection{
+        gap: 48px;
+    }
+    .itemInfo{
+        .itemTitle{
+            font-size: var(--fz-5);
+            /* font-size: 40px; */
+            letter-spacing: 8px;
+        }
+        .itemSeries{
+            font-size: var(--fz-3);
+            /* font-size: 32px; */
+            font-weight: var(--fw-1);
+            letter-spacing: 3.2px;
+        }
+        .itemPrice{
+            font-size: var(--fz-5);
+            /* font-size: 36px; */
+            letter-spacing: 3.6px;
+            margin: 56px 0;
+        }
+    }
+    .itemInfo .itemAttr{
+        font-size: var(--fz-2);
+        /* font-size: 20px; */
+    }
+
+    .btnSection{
+        flex-direction: row;
+    }
+
+/* 相關商品 */
+    .itemContent .itemRelatived li{
+        margin-bottom: 30px;
+    }
+/* 相關商品標題 */
+    .itemContent .itemRelatived li .relatedProductTitle {
+        margin: 10px;
+    }
+    .itemContent .itemRelatived li .relatedProductTitle a {
+        font-size: var(--fz-2); 
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .col-lg-5{
+        padding-bottom: 40px;
+    }
+    .btnSection{
+        flex-direction: column;
+    }
+}
+

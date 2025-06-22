@@ -1,0 +1,627 @@
+/* ======================手機===================== */
+/* --------banner區塊-------- */
+.bannerSection{
+    padding-top: 70px;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    overflow:hidden;   
+}
+
+.bannerScaleWrap {
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
+    transform-origin: top center; 
+    transition: transform 0.3s ease;
+}
+.bannerContainer{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.bannerContainer > *{
+    position: static;
+    width: 100%;
+}
+
+/* banner-圖片 */
+.bannerImg img {
+    max-width: 100%;
+    height: auto;
+    display: none;
+    /* margin: 0 auto; */
+}
+
+.bannerImg.bannerImg-left img{
+    width: 100%;
+    display: block;
+}
+
+/* banner-文字-只顯示slogan */
+.bannerQuote.bannerQuote-center{
+    position: relative;
+}
+
+.bannerQuote.bannerQuote-center p{
+    font-size: var(--fz-2);
+    color: var(--white);
+    text-shadow: 1px 1px 2px var(--black);
+    
+    font-weight: var(--fw-1);
+    letter-spacing: 2px;
+    line-height: 1.6;
+    
+    position: absolute;
+    top: -50px;
+    right: 0px;
+}
+.bannerQuote.bannerQuote-bottom{
+    display: none;
+}
+
+/* --------圖片錯位輪播區塊-------- */
+/*輪播區遮罩層*/
+.sliderSection .sliderWrap {
+    overflow: hidden;
+    width: 100%;
+    margin: 20px 0;
+}
+
+/*滑動軌道*/
+.sliderSection .slideTrack {
+    display: flex;
+    width: max-content;
+    will-change: transform; 
+    
+}
+
+/*單張圖片外框*/
+.sliderSection .slideItem {
+    flex: 0 0 auto;
+    margin: 0 10px;
+}
+
+.sliderSection .slideItem img {
+    width: 50vw;
+    height: auto;
+    object-fit: cover;
+}
+
+/* --------藍染步驟區塊-------- */
+/* .row 的方向是 column，.col-12 (一欄)、卡片直排*/
+.stepSection .container .row{
+    display: flex;
+    flex-direction: column;
+    /* align-items: stretch;  */
+}
+
+.stepSection .container .row .col-12{
+    margin-bottom: 40px;
+}
+
+.stepSection .container .row .stepCard{
+    display: flex;
+    flex-direction: column;
+    padding: 24px 40px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+
+    /* height: 90vh;
+    max-height: 500px; */
+    flex-grow: 1;
+
+    background: var(--white);
+    box-sizing:border-box;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stepSection .container .row .stepCard .content{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex-grow: 1
+}
+
+.stepSection .container .row .stepCard .content .stepTitle{
+    
+    font-size: var(--fz-2);
+    /* font-size: 20px; */
+    span{
+        color: var(--secondary);
+        font-family: "Sofia Sans";
+        font-weight: var(--fw-5);
+        letter-spacing: 5px;
+
+        display: block;
+        margin-bottom: 8px;
+    }
+    h3{
+        color: var(--primary);
+        font-weight: var(--fw-4);
+        letter-spacing: 3px;
+    }
+    
+}
+
+.stepSection .container .row .stepCard .content p{
+    color: var(--primary);
+    font-size: var(--fz-1);
+    /* font-size: 16px; */
+    font-weight: var(--fw-1);
+    line-height: 30px;
+    letter-spacing: 1.6px;
+}
+
+
+.stepSection .container .row .stepCard .pic img{
+    vertical-align: middle;
+    
+}
+
+
+/* --------工作坊消息區塊-------- */
+.workshopSection .container .row .col-12{
+    margin-bottom: 40px; 
+}
+.workshopSection .workshopCard{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    
+    padding-top: 24px;
+    border-top: 1px solid var(--primary);
+}
+
+.workshopSection .workshopCard .workshopPic{
+    max-height: 250px;
+    overflow: hidden;
+
+}
+
+.workshopSection .workshopCard .workshopPic img{
+    width: 100%;
+    object-fit: cover; 
+    transition: transform 0.5s ease;
+}
+
+.workshopSection .workshopCard .workshopPic img:hover{
+    transform: scale(1.05);
+}
+
+.workshopSection .workshopCard .workshopContent{
+    flex-grow: 1;
+    a{
+        text-decoration: none;
+        p{
+            color: var(--primary);
+            font-size: var(--fz-1);
+            font-weight: var(--fw-1);
+            line-height: 28px;
+            letter-spacing: 1.6px;
+        }
+    }
+} 
+
+.workshopSection .workshopCard .workshopContent .workshopDate{
+    a{
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+    margin-bottom: 24px;
+    text-decoration: none;
+    
+        span{
+            font-size: var(--fz-1);
+            color: var(--primary);
+            font-weight: var(--fw-1);
+            letter-spacing: 3px;
+        }
+        h3{
+            font-size: var(--fz-1);
+            color: var(--secondary);
+            font-weight: var(--fw-3);
+            letter-spacing: 3px;
+
+            display: block;
+        }
+    }
+}
+
+/* ======================768===================== */
+@media (min-width: 768px) {
+/* --------banner區塊-------- */
+    .bannerSection{
+        padding-top: 0px;
+    }
+    .bannerScaleWrap {
+        width: 1920px;
+        height: 1000px;
+    }
+    .bannerContainer {
+        position: relative;
+        width: 1920px;
+        height: 1000px;
+        display:block;  
+        padding: 0; /* 移除 padding */
+    }
+    
+    .bannerContainer > * {
+        position: absolute;
+        width: auto;
+    }
+    
+
+    /* banner-圖片 */
+    .bannerImg img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    }
+
+    .bannerImg-right{
+        top: 57px;
+        left: 1072px;
+    }
+    .bannerImg-left{
+        top: 160px;
+        left: 256px;
+    }
+    
+    .bannerImg-leftcenter{
+        top: 586px;
+        left: 463px;
+    }
+    
+    .bannerImg-centerbottom{
+        top: 700px;
+        left: 771px;
+    }
+    
+    /* banner-文字 */
+    .bannerQuote p{
+        display: block;
+        font-weight: var(--fw-1);
+        color: var(--primary);
+        font-size: var(--fz-3);
+        letter-spacing: 6px;
+        line-height: 60px; 
+        
+    }
+    
+    .bannerQuote.bannerQuote-center p{
+        white-space: nowrap; /* 強迫文字不換行 */
+        top: 135px;
+        left: 888px;
+        writing-mode: vertical-lr;
+
+        font-weight: var(--fw-1);
+        color: var(--primary);
+        font-size: var(--fz-3);
+        text-shadow: unset;
+
+        letter-spacing: 6px;
+        line-height: 60px; 
+    }
+
+    .bannerQuote.bannerQuote-bottom{
+        display: block;
+        top: 704px;
+        left: 1118px;
+    }
+    .bannerQuote-bottom :nth-child(even){
+        text-indent: 70px;
+    }
+
+/* --------圖片錯位輪播區塊-------- */
+    .sliderSection{
+        position: relative;
+    }
+
+    .sliderSection .slideItem {
+        flex:0 0 auto;
+        margin: 2vw;
+        /* margin: 38px; */
+    }
+
+    .sliderSection .slideItem img {
+        width: auto;
+        height: auto;
+}
+    
+    /* 圖片錯位 */
+    .sliderSection .slideItem:nth-child(odd) img {
+        margin-top: 6.4vw;
+        margin-bottom: 0;
+    }
+
+    .sliderSection .slideItem:nth-child(even) img {
+        margin-top: 0;
+        margin-bottom: 6.4vw;
+    }
+
+/* --------768藍染步驟區塊-------- */
+/* column、col-md-12 (一欄)、卡片內部橫排 */
+    .stepSection .container .row .col-md-12{
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .stepSection .container .row .stepCard{
+    display: flex;
+    flex-direction: row;
+    padding: 24px 40px;
+    justify-content:space-between;
+    align-items: start;
+    gap: 24px;
+
+    /* height: auto; */
+    }
+
+    .stepSection .container .row .stepCard .content {
+        flex-grow: 1; 
+    }
+
+/* --------768工作坊消息區塊-------- */
+    .workshopSection .container .row .col-md-6{
+        margin-bottom: 60px; 
+    }
+    .workshopSection .workshopCard{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        
+        padding-top: 24px;
+        border-top: 1px solid var(--primary);
+    }
+
+
+    .workshopSection .workshopCard .workshopContent{
+        flex-grow: 1;
+        a{
+            text-decoration: none;
+            p{
+                color: var(--primary);
+                font-size: var(--fz-1);
+                font-weight: var(--fw-1);
+                line-height: 28px;
+                letter-spacing: 1.6px;
+            }
+        }
+    } 
+
+    .workshopSection .workshopCard .workshopContent .workshopDate{
+        a{
+        display: flex;
+        align-items: center;
+
+        gap: 24px;
+        margin-bottom: 24px;
+        text-decoration: none;
+        
+            span{
+                font-size: var(--fz-1);
+                color: var(--primary);
+                font-weight: var(--fw-1);
+                letter-spacing: 3px;
+            }
+            h3{
+                font-size: var(--fz-2);
+                color: var(--secondary);
+                font-weight: var(--fw-3);
+                letter-spacing: 3px;
+
+                display: block;
+            }
+        }
+    }
+}
+
+/* =====================1024===================== */
+@media screen and (min-width: 1024px){
+/* --------1024藍染步驟區塊-------- */
+/* row、col-lg-6 (兩欄)對齊、卡片內部直排 */
+    .stepSection .container .row{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch; /* 確保同一行的卡片高度一致 */
+    }
+
+    .stepSection .container .row .col-lg-6{
+        margin-bottom: 30px;
+        display: flex; 
+        flex-direction: column; 
+    }
+
+    .stepSection .container .row .stepCard{
+        display: flex;
+        flex-direction: column;
+        padding: 24px 40px;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+
+        flex-grow: 1; 
+        /* 繼續讓 stepCard 填充其父元素 (.col-lg-6) 的高度 */
+
+        /* height: 450px; */
+    }
+    .stepSection .container .row .stepCard .content {
+        flex-grow: 1; /* 讓內容區塊成長，將圖片推到底部 */
+    }
+
+/* --------1024工作坊消息區塊-------- */
+.workshopSection .container .row {
+    flex-direction: row;
+    align-items: stretch; 
+}
+
+.workshopSection .container .row .col-lg-4{
+    margin-bottom: 40px; 
+}
+
+.workshopSection .workshopCard{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    
+    padding-top: 24px;
+    border-top: 1px solid var(--primary);
+
+}
+    .workshopSection :nth-child(-n+3) .workshopCard{
+        border-bottom: 0px; 
+    }
+
+    .workshopSection .workshopCard .workshopPic{
+        max-height: 250px;
+        overflow: hidden;
+
+    }
+
+    .workshopSection .workshopCard .workshopPic img{
+        width: 100%;
+        object-fit: cover; 
+        transition: transform 0.5s ease;
+    }
+
+    .workshopSection .workshopCard .workshopPic img:hover{
+        transform: scale(1.05);
+    }
+
+    .workshopSection .workshopCard .workshopContent{
+        flex-grow: 1;
+        a{
+            text-decoration: none;
+            p{
+                color: var(--primary);
+                font-size: 16px;
+                font-weight: var(--fw-1);
+                line-height: 28px;
+                letter-spacing: 1.6px;
+            }
+        }
+    } 
+
+    .workshopSection .workshopCard .workshopContent .workshopDate{
+        
+        a{
+        display: flex;
+        align-items: center;
+        /* font-size: 0.8vw; */
+        font-size: 16px;
+
+        gap: 24px;
+        margin-bottom: 24px;
+        text-decoration: none;
+        
+            span{
+                color: var(--primary);
+                font-weight: var(--fw-1);
+                letter-spacing: 3px;
+            }
+            h3{
+                font-size: 20px;
+                color: var(--secondary);
+                font-weight: var(--fw-3);
+                letter-spacing: 3px;
+
+                display: block;
+            }
+        }
+    }
+}
+
+/* =====================1200===================== */
+@media screen and (min-width: 1200px){
+/* ----1200藍染步驟區塊---- */
+/* row、col-lg-6 (兩欄)錯落、卡片內部橫排 */
+    .stepSection .container .row{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .stepSection .container .row .col-lg-6{
+        margin-bottom: 50px;
+    }
+
+    .stepSection .container .row .stepCard{
+        display: flex;
+        padding: 24px 40px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: start;
+        gap: 24px;
+
+        /* height: auto;*/
+    }
+    .stepSection .container .row .stepCard .content {
+        flex-grow: 1;
+    }
+
+    .stepSection .row .col-lg-6:nth-child(even){
+        /* margin-top: 180px; */
+        transform: translateY(50%);
+    }
+}
+
+/* ====================768~1200縮放==================== */
+@media (min-width:768px) and (max-width:1200px){
+/* banner-文字縮放 */
+    .bannerQuote p{
+        font-size: var(--fz-4);
+        letter-spacing: 10px;  
+    }   
+    .bannerQuote.bannerQuote-center p{
+        top: 50px;
+        left: 888px;
+
+        font-size: var(--fz-4);
+        letter-spacing: 8px;
+    }
+}
+
+/* ====================768~1919縮放==================== */
+@media (min-width:768px) and (max-width:1919px){
+    .bannerScaleWrap{
+        transform-origin: top center;
+        transition: transform 0.1s ease-out;
+    }
+}
+
+/* ================= >1920不縮放、區塊置中============== */
+@media (min-width:1920px){
+    .pageContainer{
+        width: 100%;
+        margin: auto;
+    }
+    .bannerSection {
+        justify-content: center;
+    }
+    .bannerScaleWrap {
+        transform: scale(1);
+    }
+
+    /* banner-文字 */
+    .bannerQuote p{
+        font-size: var(--fz-3);
+        letter-spacing: 6px;
+        line-height: 60px; 
+    }
+    
+    .bannerQuote.bannerQuote-center p{
+        top: 135px;
+        left: 888px;
+        font-size: var(--fz-3);
+        letter-spacing: 6px;
+    }
+}
+
+

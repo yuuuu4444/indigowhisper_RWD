@@ -1,0 +1,77 @@
+/* 段落標題 */
+.title{
+    position: relative;
+    padding: 18px;
+    margin: 20px 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-left: 12vw;
+}
+
+.title::before{
+    content: "";
+    position: absolute;
+    
+    left: 0;
+    top: 28%;
+    width: 10vw; /* 線條寬度 */
+    height: 1px; 
+    background: var(--primary);
+}
+
+.title h2{
+    color:var(--primary);
+    font-size: var(--fz-2);
+    /* font-size: 32px; */
+    font-weight: 700;
+    letter-spacing: 16px;
+}
+
+.title p{
+    color: var(--primary);
+    font-size: var(--fz-1);
+    /* font-size: 20px; */
+    font-weight: 400;
+    letter-spacing: 10px;
+    line-height: 24px;
+}
+
+@media screen and (min-width: 768px){
+    .title{
+    position: relative;
+    padding: 18px 0px;
+    margin: 80px 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-left: 18vw;
+    }
+    .title::before{
+    content: "";
+    position: absolute;
+    
+    left: 0;
+    top: 35%;
+    width: 17vw; /* 線條寬度 */
+    height: 1px; 
+    background: var(--primary);
+    }
+    .title h2{
+        color:var(--primary);
+        font-size: var(--fz-4);
+        /* font-size: 32px; */
+        font-weight: 700;
+        letter-spacing: 16px;
+    }
+
+    .title p{
+        color: var(--primary);
+        font-size: var(--fz-2);
+        /* font-size: 20px; */
+        font-weight: 400;
+        letter-spacing: 10px;
+    }
+}

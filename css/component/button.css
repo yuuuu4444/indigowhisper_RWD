@@ -1,0 +1,196 @@
+/* ----index：moreBtn（a）---- */
+.moreBtnSection{
+    display: flex;
+    justify-content: center;
+}
+.moreBtnSection .moreBtn{
+    margin: 20px 0;
+}
+
+.moreBtn a{
+    color: var(--primary);
+    font-family: "Sofia Sans";
+    font-size: var(--fz-3);
+    /* font-size: 24px; */
+    font-weight: 400;
+    letter-spacing: 5.76px;
+    text-decoration: none;
+
+    position: relative;
+}
+
+.moreBtn a::after{
+    content: "";
+    position: absolute;
+    
+    left: 0;
+    bottom: -4px;
+    width: 120px;
+    height: 1px; 
+    background: var(--primary);
+    transform-origin: left;
+    transition: transform 0.3s ease-out;
+}
+
+.moreBtn a:hover{
+    color: var(--secondary);
+    font-weight: 800;
+}
+
+.moreBtn a:hover::after{
+    background: var(--secondary);
+    transform: scaleX(1.5);
+    transform-origin: left;
+    transition: transform 0.3s ease-out;
+}
+
+
+@media screen and (min-width: 768px){
+    .moreBtnSection{
+        display: flex;
+        justify-content: end;
+    }
+    .moreBtnSection .moreBtn{
+        margin: 20px 90px 20px 0px;
+    }
+}
+
+/* ----index：closeBtn、searchSubmit---- */
+/* X關閉（span） */
+.modal .closeBtn{
+    position: absolute;
+    top: -20px;
+    right: -40px;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+    color: var(--white);
+}
+
+/* 搜尋btn（button） */
+.inputRow .searchSubmit{
+    padding: 12px 24px;
+    font-size: var(--fz-2);
+
+    white-space: nowrap;
+    background-color: var(--primary);
+    color: white;
+
+    border: none;
+    cursor: pointer;
+}
+
+.inputRow .searchSubmit:hover{
+    background-color: var(--secondary);
+}
+
+
+
+/* ----product、cart：buyNowBtn、addCartBtn（a）---- */
+.btnSection{
+    display: flex;
+}
+
+.buyNowBtn,.addCartBtn{
+    flex: 1;
+}
+
+.buyNowBtn a,.addCartBtn a{
+    display: block;
+    padding: 24px;
+    height: 100%;
+    box-sizing: border-box; 
+
+    font-size: var(--fz-3);
+    font-weight: var(--fw-2);
+    letter-spacing: 5.76px;
+    text-align: center;
+    
+    text-decoration: none;
+}
+
+.buyNowBtn a{
+    color: var(--white);
+    background-color: var(--primary);
+    border: 3px solid transparent;
+}
+.buyNowBtn a:hover{
+    background: var(--secondary);
+}
+
+
+.addCartBtn a{
+    color: var(--primary);
+    background-color: var(--blue);
+    border: 3px solid transparent;
+}
+
+.addCartBtn a:hover{
+    border: 3px solid var(--secondary);
+}
+
+
+
+/* ----sign：signBtn（button）---- */
+.signForm .signBtn{
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 16px;
+    margin-bottom: 16px;
+
+    color: var(--white);
+    background-color: var(--primary);
+
+    font-size: var(--fz-2);
+    font-weight: var(--fw-3);
+    letter-spacing: 3.36px;
+}
+
+.signForm .signBtn:hover{
+    background-color: var(--secondary);
+    border: 2px solid var(--secondary);
+    cursor: pointer;
+}
+
+
+/* ----workshop：registerBtn（button）---- */
+.registerSection .registerBtn {
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+    color: var(--white);
+    background-color: var(--primary);
+
+    font-size: var(--fz-2);
+    font-weight: var(--fw-3);
+    letter-spacing: 3.36px;
+}
+
+.registerSection .registerBtn:hover{
+    background-color: var(--secondary);
+    border: 2px solid var(--secondary);
+    cursor: pointer;
+}
+
+
+
+/* ----button通用樣式---- */
+/* button{
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+    color: var(--white);
+    background-color: var(--primary);
+
+    font-size: var(--fz-2);
+    font-weight: var(--fw-3);
+    letter-spacing: 3.36px;
+}
+
+button:hover{
+    background-color: var(--secondary);
+    border: 2px solid var(--secondary);
+    cursor: pointer;
+} */

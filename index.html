@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/base/reset.css">
+    <link rel="stylesheet" href="css/base/variables.css">
+    <link rel="stylesheet" href="css/layout/gridsystem.css">
+    <link rel="stylesheet" href="css/component/header.css">
+    <link rel="stylesheet" href="css/component/footer.css">
+
+    
+    <link rel="stylesheet" href="css/component/component.css">
+    <link rel="stylesheet" href="css/component/button.css">
+    <link rel="stylesheet" href="css/component/form.css">
+    <link rel="stylesheet" href="css/component/title.css">
+    <link rel="stylesheet" href="/css/page/index.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+    <link rel="icon" href="img/favicon.ico">
+    <title>染木青 Indigo whisper</title>
+</head>
+<body>
+    <div class="pageContainer">
+        <!-- header -->
+        <header class="header" id="header">
+            <h1>
+                <a href="index.html">
+                    <img src="img/logo_pc.svg" alt="染木青logo">
+                </a>
+            </h1>
+
+            <!-- 導覽列 -->
+            <nav class="nav" id="nav">
+                <ul class="menuList">
+                    <li><a href="index.html">首頁</a></li>
+                    <li><a href="about.html">關於我們</a></li>
+                    <li><a href="workshop.html">工作坊</a></li>
+                    <li><a href="shop.html">精選染品</a></li>
+                </ul>
+
+                <!-- 平板、pc在header，手機固定底部 -->
+                <ul class="iconList">
+                    <li><a href="#" id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                    <li><a href="sign.html"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
+                <!-- 搜尋彈窗 -->
+                <div id="searchModal" class="modal">
+                    <div class="searchContent">
+                    <span class="closeBtn">&times;</span>
+                    <div class="inputRow">
+                        <input type="text" placeholder="輸入關鍵字搜尋..." class="searchInput" id="searchInput">
+                        <button class="searchSubmit" id="searchSubmit">搜尋</button>
+                    </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- 漢堡選單 -->
+            <button class="hamburger">
+                <i class="fa-solid fa-bars iconBar"></i>
+                <i class="fa-solid fa-xmark  iconBar-close"></i>
+            </button>
+        </header>
+
+        <!-- banner -->
+        <section class="bannerSection">
+            <div class="bannerScaleWrap">
+                <div class="bannerContainer">
+                    <div class="bannerImg bannerImg-right">
+                        <img src="img/banner_01.png" alt="bannerImg-right">
+                    </div>
+                    <div class="bannerImg bannerImg-left">
+                        <img src="img/banner_02.png" alt="bannerImg-left">
+                    </div>
+                    <div class="bannerImg bannerImg-leftcenter">
+                        <img src="img/banner_03.png" alt="bannerImg-leftcenter">
+                    </div>
+                    <div class="bannerImg bannerImg-centerbottom">
+                        <img src="img/banner_04.png" alt="bannerImg-centerbottom">
+                    </div>
+                    <div class="bannerQuote bannerQuote-center">
+                        <p>以光為引，在布上寫下自然的呢喃。</p>
+                    </div>
+                    <div class="bannerQuote bannerQuote-bottom">
+                        <p>山林入染，隨靜影悠然鋪展。</p>
+                        <p>草木低語，映出四季的流轉。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- slider -->
+        <section class="sliderSection">
+            <div class="title">
+                <h2>新染上色</h2>
+                <p>植物染色的範圍綻放，悄悄留在每一塊布上。</p>
+            </div>
+            <div class="sliderWrap">
+                <div class="slideTrack">
+                    <div class="slideItem"><img src="img/slide_01.png" alt="slide 1"></div>
+                    <div class="slideItem"><img src="img/slide_02.png" alt="slide 2"></div>
+                    <div class="slideItem"><img src="img/slide_03.png" alt="slide 3"></div>
+                    <div class="slideItem"><img src="img/slide_04.png" alt="slide 4"></div>
+                    </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-12 moreBtnSection">
+                        <div class="moreBtn">
+                            <a href="shop.html">More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- step -->
+        <section class="stepSection">
+            <div class="title">
+                <h2>靛色小徑</h2>
+                <p>一步一色，一段與自然共舞的旅程。</p>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-12 col-lg-6">
+                        <div class="stepCard">
+                            <div class="content">
+                                <div class="stepTitle">
+                                    <span>Step 1</span>
+                                    <h3>採集與準備染料植物</h3>
+                                </div>
+                                <p>採集成熟的藍染植物（例如：馬藍、蓼藍等），並進行初步的處理，如清洗、陰乾或發酵等，以提取藍色染料。</p>
+                            </div>
+                            <div class="pic">
+                                <img src="img/step1.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-6">
+                        <div class="stepCard">
+                            <div class="content">
+                                <div class="stepTitle">
+                                    <span>Step 2</span>
+                                    <h3>提取藍靛</h3>
+                                </div>
+                                <p>透過浸泡、攪拌、沉澱等方式，從處理後的染料植物中提取出藍色的染料粉末或泥狀物，稱為藍靛。</p>
+                            </div>
+                            <div class="pic">
+                                <img src="img/step2.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-6">
+                        <div class="stepCard">
+                            <div class="content">
+                                <div class="stepTitle">
+                                    <span>Step 3</span>
+                                    <h3>調製染液</h3>
+                                </div>
+                                <p>將提取出的藍靛加入水中，並根據需要的染色濃度和布料種類，加入適量的助劑（如：石灰、草木灰等）進行調製，形成染浴。</p>
+                            </div>
+                            <div class="pic">
+                                <img src="img/step3.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-6">
+                        <div class="stepCard">
+                            <div class="content">
+                                <div class="stepTitle">
+                                    <span>Step 4</span>
+                                    <h3>布料前處理</h3>
+                                </div>
+                                <p>將要染色的布料進行清洗、脫漿等前處理，確保布料乾淨且易於染色。</p>
+                            </div>
+                            <div class="pic">
+                                <img src="img/step4.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-6">
+                        <div class="stepCard">
+                            <div class="content">
+                                <div class="stepTitle">
+                                    <span>Step 5</span>
+                                    <h3>綁紮或防染</h3>
+                                </div>
+                                <p>根據設計需求，使用繩子、夾子、縫線等工具在布料上進行綁紮或縫製，形成防染區域，創造出獨特的圖案。</p>
+                            </div>
+                            <div class="pic">
+                                <img src="img/step5.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-6">
+                        <div class="stepCard">
+                            <div class="content">
+                                <div class="stepTitle">
+                                    <span>Step 6</span>
+                                    <h3>浸染與氧化</h3>
+                                </div>
+                                <p>將綁紮好的布料浸入調製好的染液中，一段時間後取出，讓染料與空氣接觸氧化，呈現藍色。這個步驟通常需要重複多次，以達到理想的染色深度。</p>
+                            </div>
+                            <div class="pic">
+                                <img src="img/step6.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-6">
+                        <div class="stepCard">
+                            <div class="content">
+                                <div class="stepTitle">
+                                    <span>Step 7</span>
+                                    <h3>水洗與後處理</h3>
+                                </div>
+                                <p>待布料達到理想的藍色後，進行充分的水洗，去除多餘的染料和助劑。之後可進行解開綁紮、晾乾、整燙等後處理。</p>
+                            </div>
+                            <div class="pic">
+                                <img src="img/step7.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- workshop -->
+        <section class="workshopSection">
+            <div class="title">
+                <h2>染手日和</h2>
+                <p>選一日晴好，讓雙手與草木相遇。</p>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="workshopCard">
+                            <div class="workshopPic">
+                                <a href="#">
+                                    <img src="img/workshop_01.png">
+                                </a>
+                            </div>
+                            <div class="workshopContent">
+                                <div class="workshopDate">
+                                    <a href="workshop.html">
+                                        <span>2025.05.01</span>
+                                        <h3>染布一日工作坊</h3> 
+                                    </a> 
+                                </div>
+                                    <a href="workshop.html">
+                                        <p>用一天時間與草木對話，從扎染打結到溫潤浸染、晾乾，完整感受天然色彩的魅力與手作溫度，特別適合對草木染有濃厚興趣的初學者。</p>
+                                    </a>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="workshopCard">
+                            <div class="workshopPic">
+                                <a href="workshop.html">
+                                    <img src="img/workshop_02.png">
+                                </a>
+                            </div>
+                            <div class="workshopContent">
+                                <div class="workshopDate">
+                                    <a href="workshop.html">
+                                        <span>2025.05.01</span>
+                                        <h3>葉語染布工作坊</h3>  
+                                    </a>
+                                </div>
+                                    <a href="workshop.html">
+                                        <p>以葉片與自然圖騰為靈感，運用植物拓印，留住森林的語言。</p>
+                                    </a>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="workshopCard">
+                            <div class="workshopPic">
+                                <a href="workshop.html">
+                                    <img src="img/workshop_03.png">
+                                </a>
+                            </div>
+                            <div class="workshopContent">
+                                <div class="workshopDate">
+                                    <a href="workshop.html">
+                                        <span>2025.05.01</span>
+                                        <h3>森色便當布工作坊</h3>  
+                                    </a>
+                                </div>
+                                    <a href="workshop.html">
+                                        <p>親手染製日式包布，讓午餐與生活多一點自然的陪伴。</p>
+                                    </a>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="workshopCard">
+                            <div class="workshopPic">
+                                <a href="workshop.html">
+                                    <img src="img/workshop_04.png">
+                                </a>
+                            </div>
+                            <div class="workshopContent">
+                                <div class="workshopDate">
+                                    <a href="workshop.html">
+                                        <span>2025.05.01</span>
+                                        <h3>花染手札工作坊</h3>  
+                                    </a>
+                                </div>
+                                    <a href="workshop.html">
+                                        <p>將染布化作布封面、小布袋或書籤，讓手作融入日常書寫。</p>
+                                    </a>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="workshopCard">
+                            <div class="workshopPic">
+                                <a href="workshop.html">
+                                    <img src="img/workshop_05.png">
+                                </a>
+                            </div>
+                            <div class="workshopContent">
+                                <div class="workshopDate">
+                                    <a href="workshop.html">
+                                        <span>2025.05.01</span>
+                                        <h3>草葉疊染工作坊</h3>  
+                                    </a>
+                                </div>
+                                    <a href="workshop.html">
+                                        <p>運用自然草葉，拓印植物紋理。獨特疊染技法，創作專屬自然印記。</p>
+                                    </a>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="workshopCard">
+                            <div class="workshopPic">
+                                <a href="workshop.html">
+                                    <img src="img/workshop_06.png">
+                                </a>
+                            </div>
+                            <div class="workshopContent">
+                                <div class="workshopDate">
+                                    <a href="workshop.html">
+                                        <span>2025.07.15</span>
+                                        <h3>草木染圍巾工作坊</h3>  
+                                    </a>
+                                </div>
+                                    <a href="workshop.html">
+                                        <p>親手體驗從媒染到浸染的完整過程。我們將使用天然草木染料，透過專業講師的指導，學習不同的綁紮技巧，創造出獨具個人風格的紋路圖案。</p>
+                                    </a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-12  moreBtnSection">
+                        <div class="moreBtn">
+                            <a href="workshop.html">More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- footer -->
+        <footer class="footer">
+            <div class="container footContent">
+                <div class="row">
+                    <div class="logoMenu col-12 col-md-12 col-lg-9">
+                        <a href="index.html">
+                            <img src="img/logo_pc.svg" alt="染木青logo">
+                        </a>
+                        <ul class="footMenu">
+                            <li class="footMenuItem"><a href="about.html">關於我們</a></li>
+                            <li class="footMenuItem"><a href="workshop.html">工作坊</a></li>
+                            <li class="footMenuItem"><a href="shop.html">商店</a></li>
+                            <li class="footMenuItem"><a href="#">聯絡我們</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-3">
+                        <ul class="footIcon">
+                            <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-square-x-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>Copyright  © Yuuuu All Rights Reserved 2025.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/base/reset.css">
+    <link rel="stylesheet" href="css/base/variables.css">
+    <link rel="stylesheet" href="css/layout/gridsystem.css">
+    <link rel="stylesheet" href="css/component/header.css">
+    <link rel="stylesheet" href="css/component/footer.css">
+    
+    <link rel="stylesheet" href="css/component/component.css">
+    <link rel="stylesheet" href="css/component/button.css">
+    <link rel="stylesheet" href="css/component/form.css">
+    <link rel="stylesheet" href="css/component/title.css">
+    <link rel="stylesheet" href="css/page/shop.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+    <link rel="icon" href="img/favicon.ico">
+    <title>染木青商行</title>
+</head>
+<body>
+    <!-- header -->
+    <header class="header" id="header">
+        <h1>
+            <a href="index.html">
+                <img src="img/logo_pc.svg" alt="染木青logo">
+            </a>
+        </h1>
+
+        <!-- 導覽列 -->
+        <nav class="nav" id="nav">
+            <ul class="menuList">
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="about.html">關於我們</a></li>
+                <li><a href="workshop.html">工作坊</a></li>
+                <li><a href="shop.html">精選染品</a></li>
+                
+            </ul>
+
+            <!-- 平板、pc在header，手機固定底部 -->
+            <ul class="iconList">
+                <li><a href="#" id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a href="sign.html"><i class="fa-solid fa-user"></i></a></li>
+                <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+            <!-- 搜尋彈窗 -->
+            <div id="searchModal" class="modal">
+                <div class="searchContent">
+                <span class="closeBtn">&times;</span>
+                <div class="inputRow">
+                    <input type="text" placeholder="輸入關鍵字搜尋..." class="searchInput" id="searchInput">
+                    <button class="searchSubmit" id="searchSubmit">搜尋</button>
+                </div>
+                </div>
+            </div>
+        </nav>
+        <!-- 漢堡選單 -->
+        <button class="hamburger">
+            <i class="fa-solid fa-bars iconBar"></i>
+            <i class="fa-solid fa-xmark  iconBar-close"></i>
+        </button>
+    </header>
+
+    <section class="categoryTitle">
+            <span>BOTANICAL GOODS&nbsp;&nbsp;</span>
+            <h2>染木青商行</h2>
+            <p>拾一片葉，取一抹色。每件作品都是來自自然與雙手的共創。從布巾到衣著，從顏色到用途，在這裡尋見屬於你的那一抹靛與綠。</p>
+    </section>
+
+    <main class="container">
+        <div class="breadcrumb">
+            <ol>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="shop.html">商店</a></li>
+                <li><a href="#" aria-current="page">精選染品</a></li>
+            </ol>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-xl-2">
+                <aside class="sidebarFilters">
+                    <ul class="filterCategoryList">
+                        <li class="filterCategoryItem">
+                            <button class="categoryToggleBtn">
+                                草木之色
+                                <span class="arrowIcon">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </span>
+                            </button>
+                            <ul class="subMenu">
+                                <li class="subMenuItem">
+                                    <a href="shop.html">靛藍系</a>
+                                    <span class="colorbox colorBlue"></span>
+                                </li>
+                                <li class="subMenuItem">
+                                    <a href="shop.html">山黃系</a>
+                                    <span class="colorbox colorYellow"></span>
+                                </li>
+                                <li class="subMenuItem">
+                                    <a href="shop.html">茜紅系</a>
+                                    <span class="colorbox colorRed"></span>
+                                </li>
+                                <li class="subMenuItem">
+                                    <a href="shop.html">灰褐系</a>
+                                    <span class="colorbox colorBrown"></span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="filterCategoryItem">
+                            <button class="categoryToggleBtn">
+                                四季時光
+                                <span class="arrowIcon">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </span>
+                            </button>
+                            <ul class="subMenu">
+                                <li class="subMenuItem"><a href="shop.html">春季款</a></li>
+                                <li class="subMenuItem"><a href="shop.html">夏季款</a></li>
+                                <li class="subMenuItem"><a href="shop.html">秋季款</a></li>
+                                <li class="subMenuItem"><a href="shop.html">冬季款</a></li>
+                            </ul>
+                        </li>
+                        <li class="filterCategoryItem">
+                            <button class="categoryToggleBtn">
+                                染布日用
+                                <span class="arrowIcon">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </span>
+                            </button>
+                            <ul class="subMenu">
+                                <li class="subMenuItem"><a href="shop.html">日常圍巾</a></li>
+                                <li class="subMenuItem"><a href="shop.html">日常衣物</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="filterCategoryItem">
+                            <button class="categoryToggleBtn">
+                                靛藍小物
+                                <span class="arrowIcon">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </span>
+                            </button>
+                            <ul class="subMenu">
+                                <li class="subMenuItem"><a href="shop.html">藍染小袋</a></li>
+                                <li class="subMenuItem"><a href="shop.html">藍染飾品</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="filterCategoryItem">
+                            <button class="categoryToggleBtn">
+                                系列限定
+                                <span class="arrowIcon">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </span>
+                            </button>
+                            <ul class="subMenu">
+                                <li class="subMenuItem"><a href="shop.html">山色系列</a></li>
+                                <li class="subMenuItem"><a href="shop.html">花葉系列</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+            <div class="col-12 col-xl-10">
+                <div class="row productCardList">
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-4">
+                        <div class="productCard">
+                            <div class="productPic">
+                                <a href="product.html">
+                                    <img src="img/product/product_01.png" alt="草木染圍巾–山霧靛">
+                                </a>
+                            </div>
+                            <div class="productInfo">
+                                <div class="productTitleSeries">
+                                    <h3 class="productTitle">
+                                        <a href="product.html">草木染圍巾-山霧粉</a>
+                                    </h3>
+                                    <h4 class="productSeries">
+                                        <a href="product.html">山色系列</a>
+                                    </h4>
+                                </div>
+                                <div class="productPriceHeart">
+                                    <span class="productPrice">NT$ 2,500</span>
+                                    <span class="heart"><i class="fa-regular fa-heart"></i></span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-4">
+                        <div class="productCard">
+                            <div class="productPic">
+                                <a href="#">
+                                    <img src="img/product/product_02.png" alt="草木染圍巾–山霧靛">
+                                </a>
+                            </div>
+                            <div class="productInfo">
+                                <div class="productTitleSeries">
+                                    <h3 class="productTitle">
+                                        <a href="product.html">草木染圍巾-青靛</a>
+                                    </h3>
+                                    <h4 class="productSeries">
+                                        <a href="product.html">
+                                            花葉系列
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div class="productPriceHeart">
+                                    <span class="productPrice">NT$ 2,000</span>
+                                    <span class="heart"><i class="fa-regular fa-heart"></i></span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-4">
+                        <div class="productCard">
+                            <div class="productPic">
+                                <a href="product.html">
+                                    <img src="img/product/product_03.png" alt="草木染圍巾–山霧靛">
+                                </a>
+                            </div>
+                            <div class="productInfo">
+                                <div class="productTitleSeries">
+                                    <h3 class="productTitle">
+                                        <a href="product.html">草木染圍巾-蘇木灰</a>
+                                    </h3>
+                                    <h4 class="productSeries">
+                                        <a href="product.html">山色系列</a>
+                                    </h4>
+                                </div>
+                                <div class="productPriceHeart">
+                                    <span class="productPrice">NT$ 1,600</span>
+                                    <span class="heart"><i class="fa-regular fa-heart"></i></span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-4">
+                        <div class="productCard">
+                            <div class="productPic">
+                                <a href="product.html">
+                                    <img src="img/product/product_04.png" alt="草木染圍巾–山霧靛">
+                                </a>
+                            </div>
+                            <div class="productInfo">
+                                <div class="productTitleSeries">
+                                    <h3 class="productTitle">
+                                        <a href="product.html">布料-藍染</a>
+                                    </h3>
+                                    <h4 class="productSeries">
+                                        <a href="product.html">花葉系列</a>
+                                    </h4>
+                                </div>
+                                <div class="productPriceHeart">
+                                    <span class="productPrice">NT$ 3,000</span>
+                                    <span class="heart"><i class="fa-regular fa-heart"></i></span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-4">
+                        <div class="productCard">
+                            <div class="productPic">
+                                <a href="product.html">
+                                    <img src="img/product/product_05.png" alt="草木染圍巾–山霧靛">
+                                </a>
+                            </div>
+                            <div class="productInfo">
+                                <div class="productTitleSeries">
+                                    <h3 class="productTitle">
+                                        <a href="product.html">布料-五倍子染</a>
+                                    </h3>
+                                    <h4 class="productSeries">
+                                        <a href="product.html">
+                                            花葉系列
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div class="productPriceHeart">
+                                    <span class="productPrice">NT$ 2,400</span>
+                                    <span class="heart"><i class="fa-regular fa-heart"></i></span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-4">
+                        <div class="productCard">
+                            <div class="productPic">
+                                <a href="product.html">
+                                    <img src="img/product/product_06.png" alt="草木染圍巾–山霧靛">
+                                </a>
+                            </div>
+                            <div class="productInfo">
+                                <div class="productTitleSeries">
+                                    <h3 class="productTitle">
+                                        <a href="product.html">布料-桃花心木</a>
+                                    </h3>
+                                    <h4 class="productSeries">
+                                        <a href="product.html">山色系列</a>
+                                    </h4>
+                                </div>
+                                <div class="productPriceHeart">
+                                    <span class="productPrice">NT$ 2,800</span>
+                                    <span class="heart"><i class="fa-regular fa-heart"></i></span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-4">
+                        <div class="productCard">
+                            <div class="productPic">
+                                <a href="product.html">
+                                    <img src="img/product/product_07.png" alt="草木染圍巾–山霧靛">
+                                </a>
+                            </div>
+                            <div class="productInfo">
+                                <div class="productTitleSeries">
+                                    <h3 class="productTitle">
+                                        <a href="product.html">布料-山霧夕</a>
+                                    </h3>
+                                    <h4 class="productSeries">
+                                        <a href="product.html">山色系列</a>
+                                    </h4>
+                                </div>
+                                <div class="productPriceHeart">
+                                    <span class="productPrice">NT$ 2,000</span>
+                                    <span class="heart"><i class="fa-regular fa-heart"></i></span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-4">
+                        <div class="productCard">
+                            <div class="productPic">
+                                <a href="product.html">
+                                    <img src="img/product/product_08.png" alt="草木染圍巾–山霧靛">
+                                </a>
+                            </div>
+                            <div class="productInfo">
+                                <div class="productTitleSeries">
+                                    <h3 class="productTitle">
+                                        <a href="product.html">布料-青靛</a>
+                                    </h3>
+                                    <h4 class="productSeries">
+                                        <a href="product.html">
+                                            花葉系列
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div class="productPriceHeart">
+                                    <span class="productPrice">NT$ 2,000</span>
+                                    <span class="heart"><i class="fa-regular fa-heart"></i></span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-4">
+                        <div class="productCard">
+                            <div class="productPic">
+                                <a href="product.html">
+                                    <img src="img/product/product_09.png" alt="草木染圍巾–山霧靛">
+                                </a>
+                            </div>
+                            <div class="productInfo">
+                                <div class="productTitleSeries">
+                                    <h3 class="productTitle">
+                                        <a href="product.html">布料-淺靛</a>
+                                    </h3>
+                                    <h4 class="productSeries">
+                                        <a href="product.html">山色系列</a>
+                                    </h4>
+                                </div>
+                                <div class="productPriceHeart">
+                                    <span class="productPrice">NT$ 1,800</span>
+                                    <span class="heart"><i class="fa-regular fa-heart"></i></span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-4">
+                        <div class="productCard">
+                            <div class="productPic">
+                                <a href="product.html">
+                                    <img src="img/product/product_10.png" alt="草木染圍巾–山霧靛">
+                                </a>
+                            </div>
+                            <div class="productInfo">
+                                <div class="productTitleSeries">
+                                    <h3 class="productTitle">
+                                        <a href="product.html">藍染-抱枕</a>
+                                    </h3>
+                                    <h4 class="productSeries">
+                                        <a href="product.html">藍染日用</a>
+                                    </h4>
+                                </div>
+                                <div class="productPriceHeart">
+                                    <span class="productPrice">NT$ 500</span>
+                                    <span class="heart"><i class="fa-regular fa-heart"></i></span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-4">
+                        <div class="productCard">
+                            <div class="productPic">
+                                <a href="product.html">
+                                    <img src="img/product/product_11.png" alt="草木染圍巾–山霧靛">
+                                </a>
+                            </div>
+                            <div class="productInfo">
+                                <div class="productTitleSeries">
+                                    <h3 class="productTitle">
+                                        <a href="product.html">藍染-提袋</a>
+                                    </h3>
+                                    <h4 class="productSeries">
+                                        <a href="product.html">
+                                            藍染小袋
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div class="productPriceHeart">
+                                    <span class="productPrice">NT$ 2,000</span>
+                                    <span class="heart"><i class="fa-regular fa-heart"></i></span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-4">
+                        <div class="productCard">
+                            <div class="productPic">
+                                <a href="product.html">
+                                    <img src="img/product/product_12.png" alt="草木染圍巾–山霧靛">
+                                </a>
+                            </div>
+                            <div class="productInfo">
+                                <div class="productTitleSeries">
+                                    <h3 class="productTitle">
+                                        <a href="product.html">藍染-圍巾</a>
+                                    </h3>
+                                    <h4 class="productSeries">
+                                        <a href="product.html">日常圍巾</a>
+                                    </h4>
+                                </div>
+                                <div class="productPriceHeart">
+                                    <span class="productPrice">NT$ 2,400</span>
+                                    <span class="heart"><i class="fa-regular fa-heart"></i></span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container footContent">
+            <div class="row">
+                <div class="logoMenu col-12 col-md-12 col-lg-9">
+                    <a href="index.html">
+                        <img src="img/logo_pc.svg" alt="染木青logo">
+                    </a>
+                    <ul class="footMenu">
+                        <li class="footMenuItem"><a href="about.html">關於我們</a></li>
+                        <li class="footMenuItem"><a href="workshop.html">工作坊</a></li>
+                        <li class="footMenuItem"><a href="shop.html">商店</a></li>
+                        <li class="footMenuItem"><a href="#">聯絡我們</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-12 col-lg-3">
+                    <ul class="footIcon">
+                        <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-square-x-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p>Copyright  © Yuuuu All Rights Reserved 2025.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- <script src="js/test.js"></script> -->
+    <script src="js/main.js"></script>
+</body>
+</html>

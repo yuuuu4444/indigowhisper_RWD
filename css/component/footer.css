@@ -1,0 +1,128 @@
+/* ======================手機===================== */
+.footer{
+    padding-bottom: 60px;
+    height: auto;
+    background-image: url("../../img/footerImg.png"); 
+    background-position: top;
+}
+.footer .footContent{
+    padding-top: 40px;
+}
+/* ----footer-logo&menu區塊---- */
+.footer .logoMenu.col-12{
+    display: none;
+}
+/* ----footer-icon區塊---- */
+    .footer .footIcon{
+        display: flex;
+        justify-content: center;
+        padding: 16px 32px;
+        gap: 48px;
+        font-size: var(--fz-4);
+         /* font-size: 30px; */
+    }
+    
+    .footer a{
+        color: var(--primary);
+    }
+    
+    .footer a:hover{
+        color: var(--secondary);
+    }
+
+/* ----footer-copyright區塊---- */
+    .footer .row p{
+        padding: 20px 0;
+        text-align: center;
+        color: var(--primary, #42577F);
+        font-size: var(--fz-0);
+        font-weight: var(--fw-0);
+    }
+    
+/* =====================768===================== */
+@media screen and (min-width: 768px){
+/* ----footer-logo&menu區塊---- */
+.footer{
+    padding-bottom: 0;
+}
+.footer .logoMenu.col-md-12{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+/* footer-logo */
+    .footer .col-md-12 a img{
+        width: 20vw;
+        max-width: 250px; 
+        padding: 10vh 0;
+    }
+
+/* footer-menu */
+    .footer .footMenu{
+        display: flex;
+        align-items: center;
+        gap: 1vw;
+    }
+    .footer .footMenu a{
+        display: block;
+        padding: 16px;
+    
+        font-weight: var(--fw-2);
+        color: var(--primary);
+        font-size: var(--fz-2);
+        /* font-size: 20px; */
+        letter-spacing: 5px;
+        text-decoration: none;
+    }
+
+/* ----footer-icon區塊---- */
+    .footer .footIcon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 16px 32px;
+        gap: 32px;
+        font-size: var(--fz-4);
+         /* font-size: 30px; */
+    }
+    
+/* ----footer-copyright區塊---- */
+    .footer .row p{
+        font-size: var(--fz-1);
+    }
+}
+
+/* =====================1024===================== */
+@media screen and (min-width: 1024px){
+/* ----footer-logo&menu區塊---- */
+    .footer .logoMenu.col-lg-9{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+/* footer-logo */
+    .footer .col-lg-9 a img{
+        width: 20vw;
+        max-width: 250px; 
+        padding: 10vh 15px;
+        /* padding: 150px 0; */
+    }
+    
+
+/* ----footer-icon區塊---- */
+    .footer .col-lg-3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer .footIcon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 16px 32px;
+        gap: 32px;
+        font-size: var(--fz-4);
+         /* font-size: 30px; */
+    }
+}
