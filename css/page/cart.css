@@ -123,9 +123,10 @@
     flex-direction: column;
     align-items: start;
     .itemAmountlabelSpan{
+        display: flex;
         color: var(--secondary);
         font-size: var(--fz-1);
-        margin:  20px 0 5px 0;
+        margin-top: 20px; 
 
         label{
             color: var(--black);
@@ -263,18 +264,22 @@
 /* 單項金額小計 */
     .cartCard .cardItemInfo .cartItemContent .itemAmount{
         flex-direction: row;
+        align-items: end;
         
         .itemAmountlabelSpan{
             font-size: var(--fz-2);
-            margin:  20px 0 5px 0;
+            margin-top:  20px;
         }
     }
+    .itemAmount .itemAmountlabelSpan label{
+        font-size: var(--fz-2);
+    }
+
 /* 單項數量加減 */
 /* Btn細節見button.css */
     .cartCard .cardItemInfo .cartItemContent .itemAmountInput{
                 margin-right: 20px;    
         }
-
 }
 
 
@@ -318,10 +323,11 @@
 /* 單項金額小計 */
     .cartCard .cardItemInfo .cartItemContent .itemAmount{
         flex-direction: row;
+        align-items: end;
         
         .itemAmountlabelSpan{
             font-size: var(--fz-2);
-            margin:  20px 0 5px 0;
+            margin-top:  20px;
         }
     }
 
